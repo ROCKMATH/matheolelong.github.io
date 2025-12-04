@@ -36,6 +36,7 @@
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3EML%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="premium.css">
 </head>
 
 <body>
@@ -62,7 +63,7 @@
   <header>
     <div class="header-content">
       <h1 class="header-title">Mathéo LELONG</h1>
-      <p class="subtitle">Développeur Full-Stack</p>
+      <p class="subtitle"><span id="typingText"></span><span class="typing-cursor">|</span></p>
       <p class="header-description">Étudiant en BUT Informatique • IUT de Lille</p>
       <div class="header-buttons">
         <a href="#contact" class="btn btn-primary">Me Contacter</a>
@@ -977,6 +978,8 @@
     applyTheme(saved);
     updateThemeIcon();
   </script>
+
+  <script src="premium.js"></script>
 
 </body>
 
