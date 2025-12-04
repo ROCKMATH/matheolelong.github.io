@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application de Gestion de Tâches – Mathéo Lelong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projet-styles.css">
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="logo">Mathéo LELONG</div>
+  <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
+  <div class="menu-links" id="menuLinks">
+    <a href="../index.html">Accueil</a>
+    <a href="../index.html#profil">Profil</a>
+    <a href="../index.html#formation">Formation</a>
+    <a href="../index.html#competences">Compétences</a>
+    <a href="../index.html#projets">Projets</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="back-btn">
+    <a href="../index.html#projets">← Retour aux projets</a>
+  </div>
+  <h1>✅ Application de Gestion de Tâches</h1>
+  <p class="project-subtitle">Une application Java pour organiser et suivre ses tâches quotidiennes</p>
+  <div class="project-meta">
+    <span class="meta-item">📅 Octobre 2024</span>
+    <span class="meta-item">⏱️ 4 semaines</span>
+    <span class="meta-item">👥 Projet en équipe (4 personnes)</span>
+  </div>
+</header>
+
+<main class="project-content">
+  
+  <section class="content-section fade-in">
+    <h2>📋 Présentation du projet</h2>
+    <p>Dans le cadre de notre formation en BUT Informatique, nous avons développé une application de gestion de tâches en Java. L'objectif était de créer un outil pratique permettant aux utilisateurs d'organiser leurs projets et tâches quotidiennes avec une interface intuitive.</p>
+    <p>Ce projet nous a permis d'appliquer les principes de la programmation orientée objet, de travailler en équipe selon la méthodologie Agile, et de gérer un projet de A à Z avec Git pour le versionnement du code.</p>
+    <p>L'application permet de créer des projets, d'y ajouter des tâches, de définir des priorités et des échéances, et de suivre l'avancement global de ses objectifs.</p>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🛠️ Technologies utilisées</h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <span class="tech-icon">☕</span>
+        <div>
+          <h3>Java</h3>
+          <p>Langage principal (Java 17)</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🎨</span>
+        <div>
+          <h3>JavaFX</h3>
+          <p>Interface graphique utilisateur</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🗄️</span>
+        <div>
+          <h3>SQLite</h3>
+          <p>Base de données locale</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">📦</span>
+        <div>
+          <h3>Maven</h3>
+          <p>Gestion des dépendances</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🔧</span>
+        <div>
+          <h3>Git / GitHub</h3>
+          <p>Contrôle de version</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">💡</span>
+        <div>
+          <h3>IntelliJ IDEA</h3>
+          <p>Environnement de développement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>✨ Fonctionnalités principales</h2>
+    <ul class="features-list">
+      <li>
+        <strong>Gestion de projets</strong>
+        <p>Créer, modifier et supprimer des projets avec un titre, une description et une couleur personnalisée pour faciliter l'organisation.</p>
+      </li>
+      <li>
+        <strong>Création de tâches</strong>
+        <p>Ajouter des tâches à chaque projet avec titre, description détaillée, date d'échéance et niveau de priorité (haute, moyenne, basse).</p>
+      </li>
+      <li>
+        <strong>Suivi d'avancement</strong>
+        <p>Marquer les tâches comme terminées et visualiser l'avancement global de chaque projet avec des barres de progression.</p>
+      </li>
+      <li>
+        <strong>Filtres et recherche</strong>
+        <p>Filtrer les tâches par statut, priorité ou date, et rechercher rapidement une tâche spécifique.</p>
+      </li>
+      <li>
+        <strong>Statistiques</strong>
+        <p>Afficher des statistiques sur la productivité : nombre de tâches complétées, temps moyen de réalisation, etc.</p>
+      </li>
+      <li>
+        <strong>Sauvegarde automatique</strong>
+        <p>Les données sont enregistrées automatiquement dans une base de données SQLite locale pour ne jamais perdre son travail.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>📸 Captures d'écran</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Vue principale des projets</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Liste des tâches</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Ajout d'une nouvelle tâche</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🎯 Défis et apprentissages</h2>
+    <div class="challenge-box">
+      <h3>Défis rencontrés</h3>
+      <p>La coordination en équipe a été notre plus grand défi. Nous avons dû apprendre à utiliser Git efficacement pour éviter les conflits de code. La gestion de l'interface JavaFX avec le système de données a également nécessité beaucoup de réflexion sur l'architecture du projet.</p>
+    </div>
+    <div class="learning-box">
+      <h3>Ce que j'ai appris</h3>
+      <p>Ce projet m'a permis de mieux comprendre les design patterns (MVC notamment), d'améliorer mes compétences en travail collaboratif avec Git, et de découvrir JavaFX pour créer des interfaces graphiques. J'ai aussi appris à gérer une base de données avec JDBC et à structurer un projet Maven.</p>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🔗 Liens utiles</h2>
+    <div class="links-grid">
+      <a href="#" class="link-card">
+        <span class="link-icon">💻</span>
+        <div>
+          <h3>Code source</h3>
+          <p>Voir sur GitHub</p>
+        </div>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-icon">📄</span>
+        <div>
+          <h3>Documentation</h3>
+          <p>Guide utilisateur</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>📂 Autres projets</h2>
+    <div class="other-projects">
+      <a href="site-web-restaurant.html" class="other-project-card">
+        <span>←</span>
+        <div>
+          <p class="small-text">Projet précédent</p>
+          <h3>Site Web Restaurant</h3>
+        </div>
+      </a>
+      <a href="bot-discord.html" class="other-project-card">
+        <div style="text-align: right;">
+          <p class="small-text">Projet suivant</p>
+          <h3>Bot Discord Multifonction</h3>
+        </div>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Mathéo LELONG - Tous droits réservés</p>
+  <p style="margin-top: 10px; font-size: 14px;">Étudiant en BUT Informatique • IUT de Lille</p>
+  <div class="social-links">
+    <a href="mailto:lelongmatheo12@gmail.com" title="Email">📧</a>
+    <a href="tel:0781076890" title="Téléphone">📱</a>
+  </div>
+</footer>
+
+<button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème" onclick="toggleTheme()">
+  <span id="themeIcon">🌙</span>
+</button>
+
+<script>
+function toggleMenu() {
+  const links = document.getElementById('menuLinks');
+  const btn = document.getElementById('menuBtn');
+  const isOpen = links.classList.toggle('active');
+  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('site-theme', theme);
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const icon = document.getElementById('themeIcon');
+  if (!icon) return;
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  icon.textContent = isLight ? '☀️' : '🌙';
+}
+
+function toggleTheme() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  applyTheme(isLight ? 'dark' : 'light');
+}
+
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(saved);
+  updateThemeIcon();
+});
+</script>
+
+</body>
+</html>

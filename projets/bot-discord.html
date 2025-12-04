@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Discord Multifonction – Mathéo Lelong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projet-styles.css">
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="logo">Mathéo LELONG</div>
+  <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
+  <div class="menu-links" id="menuLinks">
+    <a href="../index.html">Accueil</a>
+    <a href="../index.html#profil">Profil</a>
+    <a href="../index.html#formation">Formation</a>
+    <a href="../index.html#competences">Compétences</a>
+    <a href="../index.html#projets">Projets</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="back-btn">
+    <a href="../index.html#projets">← Retour aux projets</a>
+  </div>
+  <h1>🤖 Bot Discord Multifonction</h1>
+  <p class="project-subtitle">Bot Discord en Python avec modération, musique et jeux interactifs</p>
+  <div class="project-meta">
+    <span class="meta-item">📅 Novembre 2024</span>
+    <span class="meta-item">⏱️ 5 semaines</span>
+    <span class="meta-item">👥 Projet personnel</span>
+  </div>
+</header>
+
+<main class="project-content">
+  
+  <section class="content-section fade-in">
+    <h2>📋 Présentation du projet</h2>
+    <p>Passionné par Discord et la communauté gaming, j'ai développé un bot multifonction en Python qui offre de nombreuses fonctionnalités pour améliorer l'expérience utilisateur sur les serveurs Discord.</p>
+    <p>Ce projet personnel m'a permis d'explorer l'API Discord, d'apprendre à gérer des événements asynchrones avec Python, et de créer une architecture modulaire permettant d'ajouter facilement de nouvelles fonctionnalités.</p>
+    <p>Le bot est actuellement déployé sur plusieurs serveurs Discord et continue d'évoluer avec de nouvelles fonctionnalités basées sur les retours des utilisateurs.</p>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🛠️ Technologies utilisées</h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <span class="tech-icon">🐍</span>
+        <div>
+          <h3>Python</h3>
+          <p>Langage principal (Python 3.11)</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🔷</span>
+        <div>
+          <h3>Discord.py</h3>
+          <p>Bibliothèque Discord</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🗄️</span>
+        <div>
+          <h3>PostgreSQL</h3>
+          <p>Base de données</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🎵</span>
+        <div>
+          <h3>yt-dlp</h3>
+          <p>Streaming musical</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">☁️</span>
+        <div>
+          <h3>Heroku</h3>
+          <p>Hébergement cloud</p>
+        </div>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">📦</span>
+        <div>
+          <h3>Git</h3>
+          <p>Gestion de version</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>✨ Fonctionnalités principales</h2>
+    <ul class="features-list">
+      <li>
+        <strong>Modération automatique</strong>
+        <p>Détection et suppression automatique des messages spam, système d'avertissements, bannissements temporaires et logs de modération.</p>
+      </li>
+      <li>
+        <strong>Lecteur de musique</strong>
+        <p>Jouer de la musique depuis YouTube, Spotify et SoundCloud avec file d'attente, contrôles (pause, skip, volume) et mode répétition.</p>
+      </li>
+      <li>
+        <strong>Système de niveaux et XP</strong>
+        <p>Les utilisateurs gagnent de l'XP en étant actifs sur le serveur, débloquent des niveaux et des rôles spéciaux avec un classement.</p>
+      </li>
+      <li>
+        <strong>Mini-jeux</strong>
+        <p>Jeux interactifs comme pendu, quiz, pierre-papier-ciseaux et système d'économie virtuelle avec monnaie du serveur.</p>
+      </li>
+      <li>
+        <strong>Commandes personnalisées</strong>
+        <p>Les administrateurs peuvent créer des commandes personnalisées avec réponses automatiques et embed messages personnalisés.</p>
+      </li>
+      <li>
+        <strong>Notifications et rappels</strong>
+        <p>Système de rappels personnels, notifications d'événements et annonces automatiques programmables.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>📸 Captures d'écran</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Commandes du bot</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Lecteur de musique</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="screenshot-placeholder">
+          <p>Système de niveaux</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🎯 Défis et apprentissages</h2>
+    <div class="challenge-box">
+      <h3>Défis rencontrés</h3>
+      <p>La gestion de la programmation asynchrone en Python a été complexe au début, notamment pour gérer plusieurs serveurs Discord simultanément. L'intégration du lecteur de musique a également nécessité beaucoup de recherches pour gérer correctement les streams audio. Enfin, l'optimisation de la base de données pour gérer un grand nombre d'utilisateurs a demandé plusieurs itérations.</p>
+    </div>
+    <div class="learning-box">
+      <h3>Ce que j'ai appris</h3>
+      <p>Ce projet m'a permis de maîtriser la programmation asynchrone avec asyncio, d'apprendre à utiliser les APIs REST et WebSocket, et de comprendre l'importance de la conception d'une architecture modulaire. J'ai aussi découvert le déploiement d'applications Python sur le cloud, la gestion de bases de données relationnelles et l'importance des logs et du monitoring pour maintenir un bot actif 24/7.</p>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>🔗 Liens utiles</h2>
+    <div class="links-grid">
+      <a href="#" class="link-card">
+        <span class="link-icon">💻</span>
+        <div>
+          <h3>Code source</h3>
+          <p>Voir sur GitHub</p>
+        </div>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-icon">📖</span>
+        <div>
+          <h3>Documentation</h3>
+          <p>Guide des commandes</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <h2>📂 Autres projets</h2>
+    <div class="other-projects">
+      <a href="gestion-taches.html" class="other-project-card">
+        <span>←</span>
+        <div>
+          <p class="small-text">Projet précédent</p>
+          <h3>App Gestion de Tâches</h3>
+        </div>
+      </a>
+      <a href="calculatrice-python.html" class="other-project-card">
+        <div style="text-align: right;">
+          <p class="small-text">Projet suivant</p>
+          <h3>Calculatrice Scientifique</h3>
+        </div>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Mathéo LELONG - Tous droits réservés</p>
+  <p style="margin-top: 10px; font-size: 14px;">Étudiant en BUT Informatique • IUT de Lille</p>
+  <div class="social-links">
+    <a href="mailto:lelongmatheo12@gmail.com" title="Email">📧</a>
+    <a href="tel:0781076890" title="Téléphone">📱</a>
+  </div>
+</footer>
+
+<button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème" onclick="toggleTheme()">
+  <span id="themeIcon">🌙</span>
+</button>
+
+<script>
+function toggleMenu() {
+  const links = document.getElementById('menuLinks');
+  const btn = document.getElementById('menuBtn');
+  const isOpen = links.classList.toggle('active');
+  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('site-theme', theme);
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const icon = document.getElementById('themeIcon');
+  if (!icon) return;
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  icon.textContent = isLight ? '☀️' : '🌙';
+}
+
+function toggleTheme() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  applyTheme(isLight ? 'dark' : 'light');
+}
+
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(saved);
+  updateThemeIcon();
+});
+</script>
+
+</body>
+</html>
