@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV – Mathéo Lelong</title>
+
+<style>
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+  --bg: #0a0a0a;
+  --card: #1a1a1a;
+  --card-hover: #252525;
+  --text: #f0f0f0;
+  --text-dim: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Particules d'arrière-plan */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 20s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-100px) translateX(50px); }
+  50% { transform: translateY(-200px) translateX(-30px); }
+  75% { transform: translateY(-100px) translateX(-50px); }
+}
+
+/* Navbar améliorée */
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.navbar.scrolled {
+  padding: 15px 50px;
+  box-shadow: 0 4px 30px rgba(99,102,241,0.3);
+}
+
+.logo { 
+  font-size: 24px; 
+  font-weight: bold; 
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu-icon { 
+  display: none; 
+  font-size: 30px; 
+  cursor: pointer; 
+  color: var(--primary);
+  transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+  transform: rotate(90deg);
+}
+
+.menu-links { 
+  display: flex; 
+  gap: 35px;
+  align-items: center;
+}
+
+.menu-links a { 
+  text-decoration: none; 
+  color: var(--text-dim); 
+  font-weight: 600; 
+  transition: all 0.3s;
+  position: relative;
+  padding: 5px 0;
+}
+
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s;
+}
+
+.menu-links a:hover {
+  color: var(--primary);
+}
+
+.menu-links a:hover::after {
+  width: 100%;
+}
+
+/* Header avec effet parallaxe */
+header {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  text-align: center; 
+  padding: 200px 20px 120px; 
+  color: white;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c') center/cover;
+  opacity: 0.25;
+  z-index: 0;
+  background-attachment: fixed;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-out;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.header-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+}
+
+.btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Sections améliorées */
+.section { 
+  padding: 60px 40px;
+  max-width: 1000px; 
+  margin: 60px auto; 
+  background: var(--card);
+  border-radius: 20px; 
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+.section:hover {
+  background: var(--card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(99,102,241,0.2);
+}
+
+.section h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.section h3 {
+  color: var(--primary); 
+  font-size: 18px; 
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.section p, .section li {
+  line-height: 1.8;
+  color: var(--text-dim);
+  font-size: 16px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 25px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.section li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.section li strong {
+  color: var(--text);
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Animations d'apparition */
+.fade-in { 
+  opacity: 0; 
+  transform: translateY(40px); 
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible { 
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Compétences avec barre de progression */
+.skills { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill { 
+  padding: 15px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white; 
+  border-radius: 12px; 
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: left 0.5s;
+}
+
+.skill:hover::before {
+  left: 100%;
+}
+
+.skill:hover { 
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+}
+
+/* Carousel amélioré */
+.carousel { 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 20px; 
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 40px; 
+  text-align: center;
+  box-shadow: inset 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.carousel-inner { 
+  display: flex; 
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.carousel-item { 
+  min-width: 100%; 
+  opacity: 0; 
+  transition: opacity 0.6s ease;
+  padding: 20px;
+}
+
+.carousel-item.active { 
+  opacity: 1;
+}
+
+.carousel-img { 
+  width: 100%; 
+  max-height: 350px; 
+  object-fit: cover; 
+  border-radius: 15px; 
+  margin-bottom: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.carousel-item.active .carousel-img {
+  animation: zoomIn 0.6s ease-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.carousel-item h3 {
+  color: var(--text);
+  font-size: 24px;
+  margin: 20px 0 10px;
+}
+
+.carousel-item p {
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.carousel-btn { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  font-size: 40px; 
+  padding: 15px 20px; 
+  cursor: pointer; 
+  color: white; 
+  background: rgba(99,102,241,0.3);
+  border-radius: 50%; 
+  transition: all 0.3s;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.carousel-btn:hover { 
+  background: var(--primary);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 20px rgba(99,102,241,0.5);
+}
+
+.carousel-btn.left { left: 20px; }
+.carousel-btn.right { right: 20px; }
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicator.active {
+  background: var(--primary);
+  transform: scale(1.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--card);
+  color: var(--text-dim);
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: var(--text-dim);
+  font-size: 24px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .menu-icon { display: block; }
+  
+  .menu-links { 
+    display: none; 
+    flex-direction: column; 
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%; 
+    background: rgba(17, 17, 17, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  
+  .menu-links.active { display: flex; }
+  
+  header h1 { font-size: 2.5em; }
+  
+  .section { 
+    padding: 40px 25px; 
+    margin: 30px 20px;
+  }
+  
+  .section h2 { font-size: 1.8em; }
+  
+  .carousel-img { max-height: 250px; }
+  
+  .carousel-btn { 
+    font-size: 30px;
+    padding: 10px 15px;
+  }
+  
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* Mode sombre / clair toggle */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(99,102,241,0.4);
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+.theme-toggle span {
+  font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Particules d'arrière-plan -->
+<div class="particles" id="particles"></div>
+
+<nav class="navbar" id="navbar">
+  <div class="logo">Mathéo LELONG</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="menu-links" id="menuLinks">
+    <a href="#profil">Profil</a>
+    <a href="#formation">Formation</a>
+    <a href="#competences">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Mathéo LELONG</h1>
+  <p>Étudiant en 2ème année BUT Informatique • 19 ans</p>
+  <p style="margin-top: 10px;">Villeneuve d'Ascq, France</p>
+  <div class="header-buttons">
+    <a href="#contact" class="btn btn-primary">Me Contacter</a>
+    <a href="#projets" class="btn">Voir mes Projets</a>
+  </div>
+</header>
+
+<div id="profil" class="section fade-in">
+  <h2>💼 Profil Professionnel</h2>
+  <p>Étudiant en 2ème année de BUT Informatique, motivé à mettre mes compétences en développement et ma rigueur au service d'une équipe dynamique dans le cadre d'un stage de fin d'année.</p>
+  <p style="margin-top: 15px;">Passionné par les nouvelles technologies et le développement web, je suis à la recherche d'opportunités pour approfondir mes connaissances pratiques et participer à des projets concrets en entreprise.</p>
+</div>
+
+<div id="formation" class="section fade-in">
+  <h2>🎓 Formations et Diplômes</h2>
+  <ul>
+    <li>
+      <strong>BUT Informatique – IUT de Lille (2024-2027)</strong>
+      Formation professionnalisante en développement d'applications, programmation orientée objet, bases de données, réseaux et gestion de projets informatiques. Actuellement en 2ème année avec des projets concrets en équipe.
+    </li>
+    <li>
+      <strong>Baccalauréat Général – Lycée Vauban, Aire-sur-la-Lys (2024)</strong>
+      Spécialités : Mathématiques et Numérique et Sciences Informatiques (NSI) • Mention Assez Bien
+    </li>
+  </ul>
+</div>
+
+<div id="competences" class="section fade-in">
+  <h2>🚀 Compétences Techniques</h2>
+  
+  <h3>💻 Langages de Programmation</h3>
+  <div class="skills">
+    <div class="skill">Java</div>
+    <div class="skill">Python</div>
+    <div class="skill">HTML / CSS</div>
+    <div class="skill">Git</div>
+  </div>
+  
+  <h3>⚛️ Frameworks & Technologies</h3>
+  <div class="skills">
+    <div class="skill">POO (Programmation Orientée Objet)</div>
+    <div class="skill">Bases de données</div>
+    <div class="skill">Développement Web</div>
+    <div class="skill">Méthodologie Agile</div>
+  </div>
+  
+  <h3>🛠️ Outils & Environnements</h3>
+  <div class="skills">
+    <div class="skill">Git / GitHub</div>
+    <div class="skill">VS Code</div>
+    <div class="skill">IntelliJ IDEA</div>
+    <div class="skill">Linux</div>
+  </div>
+  
+  <h3>🌟 Qualités Personnelles</h3>
+  <div class="skills">
+    <div class="skill">Motivé</div>
+    <div class="skill">Rigoureux</div>
+    <div class="skill">Curieux</div>
+    <div class="skill">Attentif</div>
+    <div class="skill">Travail en équipe</div>
+  </div>
+</div>
+
+<div id="experience" class="section fade-in">
+  <h2>💼 Expériences</h2>
+  <ul>
+    <li>
+      <strong>Application Java – Projet IUT (en groupe)</strong>
+      Réalisation d'une application Java dans le but d'appliquer une méthodologie agile. Développement en équipe avec utilisation de la programmation orientée objet et gestion collaborative avec Git.
+    </li>
+    <li>
+      <strong>Site Web – Projet Scolaire (en groupe)</strong>
+      Conception et développement d'un site web en groupe avec utilisation de HTML, CSS et Git dans le cadre de mon parcours scolaire. Travail collaboratif et respect des délais.
+    </li>
+  </ul>
+</div>
+
+<div id="projets" class="section fade-in">
+  <h2>🎨 Projets Personnels</h2>
+  <div class="carousel">
+    <div class="carousel-inner" id="carouselInner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" class="carousel-img" alt="Dashboard Analytics">
+        <h3>📊 Dashboard Analytics</h3>
+        <p>Application de visualisation de données en temps réel avec React et D3.js. Intégration d'APIs externes, graphiques interactifs et système de notifications. Déployée sur Vercel avec plus de 500 utilisateurs actifs.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800" class="carousel-img" alt="E-commerce">
+        <h3>🛒 Plateforme E-commerce</h3>
+        <p>Site e-commerce complet avec panier d'achat, système de paiement Stripe, gestion de stock et panel d'administration. Stack MERN (MongoDB, Express, React, Node.js). Interface responsive et optimisée SEO.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" class="carousel-img" alt="IA Chat">
+        <h3>🤖 Assistant IA Personnel</h3>
+        <p>Chatbot intelligent utilisant l'API OpenAI GPT-4, avec mémorisation des conversations et personnalisation des réponses. Interface moderne avec animation des messages, mode sombre et sauvegarde locale des historiques.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" class="carousel-img" alt="Tracker Fitness">
+        <h3>💪 Application Fitness Tracker</h3>
+        <p>Application mobile-first pour le suivi d'entraînements sportifs. Graphiques de progression, calculateur de calories, planificateur d'exercices et intégration avec wearables. Développée avec React Native et Firebase.</p>
+      </div>
+    </div>
+    <div class="carousel-btn left" onclick="prevProject()">❮</div>
+    <div class="carousel-btn right" onclick="nextProject()">❯</div>
+    <div class="carousel-indicators" id="indicators"></div>
+  </div>
+</div>
+
+<div id="contact" class="section fade-in">
+  <h2>📬 Contact</h2>
+  <p style="font-size: 18px; margin-bottom: 25px;">N'hésitez pas à me contacter pour toute opportunité de stage ou collaboration !</p>
+  <p><strong>Email:</strong> <a href="mailto:lelongmatheo12@gmail.com" style="color: var(--primary);">lelongmatheo12@gmail.com</a></p>
+  <p><strong>Téléphone:</strong> 07 81 07 68 90</p>
+  <p><strong>Adresse:</strong> 59650 Villeneuve d'Ascq <br> 62120 Aire sur la lys</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Mathéo LELONG - Tous droits réservés</p>
+  <p style="margin-top: 10px; font-size: 14px;">Étudiant en BUT Informatique • IUT de Lille</p>
+  <div class="social-links">
+    <a href="mailto:lelongmatheo12@gmail.com" title="Email"></a>
+    <a href="tel:0781670890" title="Téléphone"></a>
+  </div>
+</footer>
+
+<div class="theme-toggle" onclick="scrollToTop()" title="Retour en haut">
+  <span>⬆️</span>
+</div>
+
+<script>
+// Toggle menu mobile
+function toggleMenu() {
+  document.getElementById("menuLinks").classList.toggle("active");
+}
+
+// Navbar scrolled effect
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Smooth scroll pour les liens
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Fermer le menu mobile après clic
+      document.getElementById("menuLinks").classList.remove("active");
+    }
+  });
+});
+
+// Intersection Observer pour animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Particules d'arrière-plan
+function createParticles() {
+  const container = document.getElementById('particles');
+  const particleCount = 30;
+  
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 20 + 's';
+    particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+    container.appendChild(particle);
+  }
+}
+
+createParticles();
+
+// Carousel amélioré
+let currentProject = 0;
+const totalProjects = document.querySelectorAll('.carousel-item').length;
+
+function createIndicators() {
+  const container = document.getElementById('indicators');
+  for (let i = 0; i < totalProjects; i++) {
+    const indicator = document.createElement('div');
+    indicator.className = 'indicator' + (i === 0 ? ' active' : '');
+    indicator.onclick = () => goToProject(i);
+    container.appendChild(indicator);
+  }
+}
+
+function updateCarousel() {
+  const items = document.querySelectorAll('.carousel-item');
+  const inner = document.getElementById('carouselInner');
+  const indicators = document.querySelectorAll('.indicator');
+  
+  items.forEach(i => i.classList.remove('active'));
+  items[currentProject].classList.add('active');
+  inner.style.transform = `translateX(-${currentProject * 100}%)`;
+  
+  indicators.forEach((ind, idx) => {
+    ind.classList.toggle('active', idx === currentProject);
+  });
+}
+
+function nextProject() {
+  currentProject = (currentProject + 1) % totalProjects;
+  updateCarousel();
+}
+
+function prevProject() {
+  currentProject = (currentProject - 1 + totalProjects) % totalProjects;
+  updateCarousel();
+}
+
+function goToProject(index) {
+  currentProject = index;
+  updateCarousel();
+}
+
+// Auto-play du carousel
+let autoplay = setInterval(nextProject, 5000);
+
+// Pause au survol
+document.querySelector('.carousel').addEventListener('mouseenter', () => {
+  clearInterval(autoplay);
+});
+
+document.querySelector('.carousel').addEventListener('mouseleave', () => {
+  autoplay = setInterval(nextProject, 5000);
+});
+
+// Initialisation
+createIndicators();
+
+// Scroll to top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Effet de typing sur le header
+const roles = ['Développeur Full-Stack', 'Passionné d\'IA', 'Créateur d\'Expériences', 'Problem Solver'];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+// Animation au chargement
+window.addEventListener('load', () => {
+  document.body.style.opacity = '0';
+  setTimeout(() => {
+    document.body.style.transition = 'opacity 0.5s';
+    document.body.style.opacity = '1';
+  }, 100);
+});
+</script>
+
+</body>
+</html>
