@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Web Restaurant – Mathéo Lelong</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+    as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="projet-styles.css">
   <meta name="theme-color" content="#0a0a0a">
@@ -15,262 +19,278 @@
 
 <body>
 
-<nav class="navbar" id="navbar">
-  <div class="logo">Mathéo LELONG</div>
-  <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
-  <div class="menu-links" id="menuLinks">
-    <a href="../index.html">Accueil</a>
-    <a href="../index.html#profil">Profil</a>
-    <a href="../index.html#formation">Formation</a>
-    <a href="../index.html#competences">Compétences</a>
-    <a href="../index.html#projets">Projets</a>
-    <a href="../index.html#contact">Contact</a>
-  </div>
-</nav>
-
-<header class="project-hero">
-  <div class="back-btn">
-    <a href="../index.html#projets">← Retour aux projets</a>
-  </div>
-  <h1>🍽️ Site Web Restaurant</h1>
-  <p class="project-subtitle">Site vitrine moderne et responsive pour un restaurant local</p>
-  <div class="project-meta">
-    <span class="meta-item">📅 Septembre 2024</span>
-    <span class="meta-item">⏱️ 3 semaines</span>
-    <span class="meta-item">👥 Projet en binôme</span>
-  </div>
-</header>
-
-<main class="project-content">
-  
-  <section class="content-section fade-in">
-    <h2>📋 Présentation du projet</h2>
-    <p>Dans le cadre d'un projet scolaire, nous avons créé un site web vitrine pour un restaurant fictif. L'objectif était de concevoir un site moderne, élégant et entièrement responsive qui met en valeur le menu, l'ambiance du restaurant et permet aux clients de réserver en ligne.</p>
-    <p>Ce projet nous a permis d'approfondir nos compétences en HTML5, CSS3 et JavaScript, ainsi que de découvrir les bonnes pratiques du développement web moderne (responsive design, accessibilité, performance).</p>
-    <p>Le design met l'accent sur la photographie culinaire avec de belles animations au scroll et une navigation intuitive.</p>
-  </section>
-
-  <section class="content-section fade-in">
-    <h2>🛠️ Technologies utilisées</h2>
-    <div class="tech-grid">
-      <div class="tech-item">
-        <span class="tech-icon">📄</span>
-        <div>
-          <h3>HTML5</h3>
-          <p>Structure sémantique</p>
-        </div>
-      </div>
-      <div class="tech-item">
-        <span class="tech-icon">🎨</span>
-        <div>
-          <h3>CSS3</h3>
-          <p>Design et animations</p>
-        </div>
-      </div>
-      <div class="tech-item">
-        <span class="tech-icon">⚡</span>
-        <div>
-          <h3>JavaScript</h3>
-          <p>Interactivité</p>
-        </div>
-      </div>
-      <div class="tech-item">
-        <span class="tech-icon">📱</span>
-        <div>
-          <h3>Responsive Design</h3>
-          <p>Compatible mobile/tablette</p>
-        </div>
-      </div>
-      <div class="tech-item">
-        <span class="tech-icon">🔧</span>
-        <div>
-          <h3>Git</h3>
-          <p>Travail collaboratif</p>
-        </div>
-      </div>
-      <div class="tech-item">
-        <span class="tech-icon">💻</span>
-        <div>
-          <h3>VS Code</h3>
-          <p>Éditeur de code</p>
-        </div>
-      </div>
+  <nav class="navbar" id="navbar">
+    <div class="logo">Mathéo LELONG</div>
+    <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()"
+      aria-label="Ouvrir le menu">☰</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="../index.html">Accueil</a>
+      <a href="../index.html#profil">Profil</a>
+      <a href="../index.html#formation">Formation</a>
+      <a href="../index.html#competences">Compétences</a>
+      <a href="../index.html#projets">Projets</a>
+      <a href="../index.html#contact">Contact</a>
     </div>
-  </section>
+  </nav>
 
-  <section class="content-section fade-in">
-    <h2>✨ Fonctionnalités principales</h2>
-    <ul class="features-list">
-      <li>
-        <strong>Page d'accueil immersive</strong>
-        <p>Hero section avec image de fond plein écran, animations d'apparition progressives et call-to-action pour réserver.</p>
-      </li>
-      <li>
-        <strong>Menu interactif</strong>
-        <p>Présentation du menu avec catégories (entrées, plats, desserts), photos des plats, descriptions et prix. Système de filtrage par catégorie.</p>
-      </li>
-      <li>
-        <strong>Galerie photos</strong>
-        <p>Galerie d'images du restaurant et des plats avec effet lightbox pour agrandir les photos en plein écran.</p>
-      </li>
-      <li>
-        <strong>Formulaire de réservation</strong>
-        <p>Formulaire de contact et réservation avec validation des champs (date, nombre de personnes, horaire).</p>
-      </li>
-      <li>
-        <strong>Section "À propos"</strong>
-        <p>Présentation de l'histoire du restaurant, de l'équipe et des valeurs culinaires.</p>
-      </li>
-      <li>
-        <strong>Design responsive</strong>
-        <p>Interface parfaitement adaptée aux smartphones, tablettes et ordinateurs avec navigation mobile optimisée.</p>
-      </li>
-    </ul>
-  </section>
+  <header class="project-hero">
+    <div class="back-btn">
+      <a href="../index.html#projets">← Retour aux projets</a>
+    </div>
+    <h1>🍽️ Site Web Restaurant</h1>
+    <p class="project-subtitle">Site vitrine moderne et responsive pour un restaurant local</p>
+    <div class="project-meta">
+      <span class="meta-item">📅 Septembre 2024</span>
+      <span class="meta-item">⏱️ 3 semaines</span>
+      <span class="meta-item">👥 Projet en binôme</span>
+    </div>
+  </header>
 
-  <section class="content-section fade-in">
-    <h2>📸 Captures d'écran</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <div class="screenshot-placeholder">
-          <p>Page d'accueil</p>
+  <main class="project-content">
+
+    <section class="content-section fade-in">
+      <h2>📋 Présentation du projet</h2>
+      <p>Dans le cadre d'un projet scolaire, nous avons créé un site web vitrine pour un restaurant fictif. L'objectif
+        était de concevoir un site moderne, élégant et entièrement responsive qui met en valeur le menu, l'ambiance du
+        restaurant et permet aux clients de réserver en ligne.</p>
+      <p>Ce projet nous a permis d'approfondir nos compétences en HTML5, CSS3 et JavaScript, ainsi que de découvrir les
+        bonnes pratiques du développement web moderne (responsive design, accessibilité, performance).</p>
+      <p>Le design met l'accent sur la photographie culinaire avec de belles animations au scroll et une navigation
+        intuitive.</p>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>🛠️ Technologies utilisées</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <span class="tech-icon">📄</span>
+          <div>
+            <h3>HTML5</h3>
+            <p>Structure sémantique</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🎨</span>
+          <div>
+            <h3>CSS3</h3>
+            <p>Design et animations</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">⚡</span>
+          <div>
+            <h3>JavaScript</h3>
+            <p>Interactivité</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">📱</span>
+          <div>
+            <h3>Responsive Design</h3>
+            <p>Compatible mobile/tablette</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔧</span>
+          <div>
+            <h3>Git</h3>
+            <p>Travail collaboratif</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">💻</span>
+          <div>
+            <h3>VS Code</h3>
+            <p>Éditeur de code</p>
+          </div>
         </div>
       </div>
-      <div class="gallery-item">
-        <div class="screenshot-placeholder">
-          <p>Menu du restaurant</p>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>✨ Fonctionnalités principales</h2>
+      <ul class="features-list">
+        <li>
+          <strong>Page d'accueil immersive</strong>
+          <p>Hero section avec image de fond plein écran, animations d'apparition progressives et call-to-action pour
+            réserver.</p>
+        </li>
+        <li>
+          <strong>Menu interactif</strong>
+          <p>Présentation du menu avec catégories (entrées, plats, desserts), photos des plats, descriptions et prix.
+            Système de filtrage par catégorie.</p>
+        </li>
+        <li>
+          <strong>Galerie photos</strong>
+          <p>Galerie d'images du restaurant et des plats avec effet lightbox pour agrandir les photos en plein écran.
+          </p>
+        </li>
+        <li>
+          <strong>Formulaire de réservation</strong>
+          <p>Formulaire de contact et réservation avec validation des champs (date, nombre de personnes, horaire).</p>
+        </li>
+        <li>
+          <strong>Section "À propos"</strong>
+          <p>Présentation de l'histoire du restaurant, de l'équipe et des valeurs culinaires.</p>
+        </li>
+        <li>
+          <strong>Design responsive</strong>
+          <p>Interface parfaitement adaptée aux smartphones, tablettes et ordinateurs avec navigation mobile optimisée.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>📸 Captures d'écran</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <div class="screenshot-placeholder">
+            <p>Page d'accueil</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="screenshot-placeholder">
+            <p>Menu du restaurant</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="screenshot-placeholder">
+            <p>Formulaire de réservation</p>
+          </div>
         </div>
       </div>
-      <div class="gallery-item">
-        <div class="screenshot-placeholder">
-          <p>Formulaire de réservation</p>
-        </div>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>🎯 Défis et apprentissages</h2>
+      <div class="challenge-box">
+        <h3>Défis rencontrés</h3>
+        <p>Le plus grand défi a été de créer une expérience vraiment responsive. Nous avons dû repenser certaines
+          sections pour qu'elles fonctionnent bien sur mobile. La galerie photos a également nécessité beaucoup de
+          travail pour obtenir un effet professionnel avec JavaScript vanilla.</p>
       </div>
+      <div class="learning-box">
+        <h3>Ce que j'ai appris</h3>
+        <p>J'ai beaucoup progressé en CSS, notamment avec Flexbox et Grid pour les layouts. J'ai aussi découvert
+          l'importance de l'optimisation des images pour la performance web. Côté JavaScript, j'ai appris à manipuler le
+          DOM efficacement et à créer des animations fluides. Le travail en binôme m'a aussi permis d'améliorer ma
+          communication et ma gestion de projet avec Git.</p>
+      </div>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>🔗 Liens utiles</h2>
+      <div class="links-grid">
+        <a href="#" class="link-card">
+          <span class="link-icon">💻</span>
+          <div>
+            <h3>Code source</h3>
+            <p>Voir sur GitHub</p>
+          </div>
+        </a>
+        <a href="#" class="link-card">
+          <span class="link-icon">🚀</span>
+          <div>
+            <h3>Site en ligne</h3>
+            <p>Voir la démo</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>📂 Autres projets</h2>
+      <div class="other-projects">
+        <a href="calculatrice-python.html" class="other-project-card">
+          <span>←</span>
+          <div>
+            <p class="small-text">Projet précédent</p>
+            <h3>Calculatrice Scientifique</h3>
+          </div>
+        </a>
+        <a href="gestion-taches.html" class="other-project-card">
+          <div style="text-align: right;">
+            <p class="small-text">Projet suivant</p>
+            <h3>App Gestion de Tâches</h3>
+          </div>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mathéo LELONG - Tous droits réservés</p>
+    <p style="margin-top: 10px; font-size: 14px;">Étudiant en BUT Informatique • IUT de Lille</p>
+    <div class="social-links">
+      <a href="mailto:lelongmatheo12@gmail.com" title="Email">📧</a>
+      <a href="tel:+33781076890" title="Téléphone">📱</a>
     </div>
-  </section>
+  </footer>
 
-  <section class="content-section fade-in">
-    <h2>🎯 Défis et apprentissages</h2>
-    <div class="challenge-box">
-      <h3>Défis rencontrés</h3>
-      <p>Le plus grand défi a été de créer une expérience vraiment responsive. Nous avons dû repenser certaines sections pour qu'elles fonctionnent bien sur mobile. La galerie photos a également nécessité beaucoup de travail pour obtenir un effet professionnel avec JavaScript vanilla.</p>
-    </div>
-    <div class="learning-box">
-      <h3>Ce que j'ai appris</h3>
-      <p>J'ai beaucoup progressé en CSS, notamment avec Flexbox et Grid pour les layouts. J'ai aussi découvert l'importance de l'optimisation des images pour la performance web. Côté JavaScript, j'ai appris à manipuler le DOM efficacement et à créer des animations fluides. Le travail en binôme m'a aussi permis d'améliorer ma communication et ma gestion de projet avec Git.</p>
-    </div>
-  </section>
+  <button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème"
+    onclick="toggleTheme()">
+    <span id="themeIcon">🌙</span>
+  </button>
 
-  <section class="content-section fade-in">
-    <h2>🔗 Liens utiles</h2>
-    <div class="links-grid">
-      <a href="#" class="link-card">
-        <span class="link-icon">💻</span>
-        <div>
-          <h3>Code source</h3>
-          <p>Voir sur GitHub</p>
-        </div>
-      </a>
-      <a href="#" class="link-card">
-        <span class="link-icon">🚀</span>
-        <div>
-          <h3>Site en ligne</h3>
-          <p>Voir la démo</p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <section class="content-section fade-in">
-    <h2>📂 Autres projets</h2>
-    <div class="other-projects">
-      <a href="calculatrice-python.html" class="other-project-card">
-        <span>←</span>
-        <div>
-          <p class="small-text">Projet précédent</p>
-          <h3>Calculatrice Scientifique</h3>
-        </div>
-      </a>
-      <a href="gestion-taches.html" class="other-project-card">
-        <div style="text-align: right;">
-          <p class="small-text">Projet suivant</p>
-          <h3>App Gestion de Tâches</h3>
-        </div>
-        <span>→</span>
-      </a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 Mathéo LELONG - Tous droits réservés</p>
-  <p style="margin-top: 10px; font-size: 14px;">Étudiant en BUT Informatique • IUT de Lille</p>
-  <div class="social-links">
-    <a href="mailto:lelongmatheo12@gmail.com" title="Email">📧</a>
-    <a href="tel:0781076890" title="Téléphone">📱</a>
-  </div>
-</footer>
-
-<button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème" onclick="toggleTheme()">
-  <span id="themeIcon">🌙</span>
-</button>
-
-<script>
-function toggleMenu() {
-  const links = document.getElementById('menuLinks');
-  const btn = document.getElementById('menuBtn');
-  const isOpen = links.classList.toggle('active');
-  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-}
-
-window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('menuLinks');
+      const btn = document.getElementById('menuBtn');
+      const isOpen = links.classList.toggle('active');
+      if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
-  });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-function applyTheme(theme) {
-  if (theme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-  }
-  localStorage.setItem('site-theme', theme);
-  updateThemeIcon();
-}
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
 
-function updateThemeIcon() {
-  const icon = document.getElementById('themeIcon');
-  if (!icon) return;
-  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  icon.textContent = isLight ? '☀️' : '🌙';
-}
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-function toggleTheme() {
-  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  applyTheme(isLight ? 'dark' : 'light');
-}
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('site-theme', theme);
+      updateThemeIcon();
+    }
 
-window.addEventListener('load', () => {
-  const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  applyTheme(saved);
-  updateThemeIcon();
-});
-</script>
+    function updateThemeIcon() {
+      const icon = document.getElementById('themeIcon');
+      if (!icon) return;
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      icon.textContent = isLight ? '☀️' : '🌙';
+    }
+
+    function toggleTheme() {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      applyTheme(isLight ? 'dark' : 'light');
+    }
+
+    window.addEventListener('load', () => {
+      const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      applyTheme(saved);
+      updateThemeIcon();
+    });
+  </script>
 
 </body>
+
 </html>

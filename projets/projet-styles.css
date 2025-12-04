@@ -328,6 +328,35 @@
   margin: 0;
 }
 
+/* Footer des pages projets */
+footer {
+  background: var(--card);
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  color: var(--text-dim);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 28px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
 /* Responsive */
 @media (max-width: 750px) {
   .project-hero {

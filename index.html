@@ -1,943 +1,983 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Portfolio de Mathéo Lelong - Développeur Full-Stack, étudiant en BUT Informatique à l'IUT de Lille. Découvrez mes projets en Java, Python, JavaScript et plus encore." />
-<meta name="keywords" content="Mathéo Lelong, développeur, full-stack, BUT Informatique, IUT Lille, portfolio, Java, Python, JavaScript" />
-<meta name="author" content="Mathéo Lelong" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de Mathéo Lelong - Développeur Full-Stack, étudiant en BUT Informatique à l'IUT de Lille. Découvrez mes projets en Java, Python, JavaScript et plus encore." />
+  <meta name="keywords"
+    content="Mathéo Lelong, développeur, full-stack, BUT Informatique, IUT Lille, portfolio, Java, Python, JavaScript" />
+  <meta name="author" content="Mathéo Lelong" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Mathéo Lelong - Développeur Full-Stack" />
-<meta property="og:description" content="Portfolio de Mathéo Lelong - Étudiant en BUT Informatique passionné par le développement web et logiciel" />
-<meta property="og:url" content="https://matheolelong.github.io" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mathéo Lelong - Développeur Full-Stack" />
+  <meta property="og:description"
+    content="Portfolio de Mathéo Lelong - Étudiant en BUT Informatique passionné par le développement web et logiciel" />
+  <meta property="og:url" content="https://matheolelong.github.io" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Mathéo Lelong - Développeur Full-Stack" />
-<meta name="twitter:description" content="Portfolio de Mathéo Lelong - Étudiant en BUT Informatique" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mathéo Lelong - Développeur Full-Stack" />
+  <meta name="twitter:description" content="Portfolio de Mathéo Lelong - Étudiant en BUT Informatique" />
 
-<title>Mathéo Lelong - Développeur Full-Stack | Portfolio</title>
+  <title>Mathéo Lelong - Développeur Full-Stack | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Preload Google Fonts stylesheet then apply onload for faster FCP -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+    as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
 
   <meta name="theme-color" content="#0a0a0a">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3EML%3C/text%3E%3C/svg%3E">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3EML%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- Barre de progression de lecture -->
-<div class="reading-progress" id="readingProgress"></div>
+  <!-- Barre de progression de lecture -->
+  <div class="reading-progress" id="readingProgress"></div>
 
-<!-- Particules d'arrière-plan avec Canvas -->
-<canvas class="particles" id="particles"></canvas>
+  <!-- Particules d'arrière-plan avec Canvas -->
+  <canvas class="particles" id="particles"></canvas>
 
-<nav class="navbar" id="navbar">
-  <div class="logo">Mathéo LELONG</div>
-  <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
-  <div class="menu-links" id="menuLinks">
-    <a href="#profil">Profil</a>
-    <a href="#formation">Formation</a>
-    <a href="#competences">Compétences</a>
-    <a href="#projets">Projets</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<header>
-  <div class="header-content">
-    <h1 class="header-title">Mathéo LELONG</h1>
-    <p class="subtitle">Développeur Full-Stack</p>
-    <p class="header-description">Étudiant en BUT Informatique • IUT de Lille</p>
-    <div class="header-buttons">
-      <a href="#contact" class="btn btn-primary">Me Contacter</a>
-      <a href="#projets" class="btn btn-secondary">Voir mes Projets</a>
+  <nav class="navbar" id="navbar">
+    <div class="logo">Mathéo LELONG</div>
+    <button class="menu-icon" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" onclick="toggleMenu()"
+      aria-label="Ouvrir le menu">☰</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="#profil">Profil</a>
+      <a href="#formation">Formation</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
     </div>
-  </div>
-  <div class="scroll-indicator">
-    <span></span>
-  </div>
-</header>
+  </nav>
 
-<div id="profil" class="section fade-in">
-  <h2>💼 Profil Professionnel</h2>
-  <div class="profile-content">
-    <p class="profile-intro">Étudiant en 2ème année de BUT Informatique, motivé à mettre mes compétences en développement et ma rigueur au service d'une équipe dynamique dans le cadre d'un stage de fin d'année.</p>
-    <p class="profile-details">Passionné par les nouvelles technologies et le développement web, je suis à la recherche d'opportunités pour approfondir mes connaissances pratiques et participer à des projets concrets en entreprise.</p>
-  </div>
-  
-  <!-- Statistiques rapides -->
-  <div class="stats-grid">
-    <div class="stat-item" data-count="2">
-      <div class="stat-icon">📚</div>
-      <span class="stat-number">2+</span>
-      <span class="stat-label">Années d'études</span>
-    </div>
-    <div class="stat-item" data-count="10">
-      <div class="stat-icon">🚀</div>
-      <span class="stat-number">10+</span>
-      <span class="stat-label">Projets réalisés</span>
-    </div>
-    <div class="stat-item" data-count="5">
-      <div class="stat-icon">⚡</div>
-      <span class="stat-number">5+</span>
-      <span class="stat-label">Technologies maîtrisées</span>
-    </div>
-  </div>
-</div>
-
-<div id="formation" class="section fade-in">
-  <h2>🎓 Formations et Diplômes</h2>
-  
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-date">2024 - 2027</div>
-      <div class="timeline-content">
-        <h3>BUT Informatique</h3>
-        <div class="timeline-location">IUT de Lille</div>
-        <p>Formation professionnalisante en développement d'applications, programmation orientée objet, bases de données, réseaux et gestion de projets informatiques.</p>
-        <div class="timeline-badge">En cours • 2ème année</div>
+  <header>
+    <div class="header-content">
+      <h1 class="header-title">Mathéo LELONG</h1>
+      <p class="subtitle">Développeur Full-Stack</p>
+      <p class="header-description">Étudiant en BUT Informatique • IUT de Lille</p>
+      <div class="header-buttons">
+        <a href="#contact" class="btn btn-primary">Me Contacter</a>
+        <a href="#projets" class="btn btn-secondary">Voir mes Projets</a>
       </div>
     </div>
-    
-    <div class="timeline-item">
-      <div class="timeline-date">2024</div>
-      <div class="timeline-content">
-        <h3>Baccalauréat Général</h3>
-        <div class="timeline-location">Lycée Vauban, Aire-sur-la-Lys</div>
-        <p>Spécialités : Mathématiques et Numérique et Sciences Informatiques (NSI)</p>
-        <div class="timeline-badge success">Mention Assez Bien</div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </header>
+
+  <div id="profil" class="section fade-in">
+    <h2>💼 Profil Professionnel</h2>
+    <div class="profile-content">
+      <p class="profile-intro">Étudiant en 2ème année de BUT Informatique, motivé à mettre mes compétences en
+        développement et ma rigueur au service d'une équipe dynamique dans le cadre d'un stage de fin d'année.</p>
+      <p class="profile-details">Passionné par les nouvelles technologies et le développement web, je suis à la
+        recherche d'opportunités pour approfondir mes connaissances pratiques et participer à des projets concrets en
+        entreprise.</p>
+    </div>
+
+    <!-- Statistiques rapides -->
+    <div class="stats-grid">
+      <div class="stat-item" data-count="2">
+        <div class="stat-icon">📚</div>
+        <span class="stat-number">2+</span>
+        <span class="stat-label">Années d'études</span>
+      </div>
+      <div class="stat-item" data-count="10">
+        <div class="stat-icon">🚀</div>
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Projets réalisés</span>
+      </div>
+      <div class="stat-item" data-count="5">
+        <div class="stat-icon">⚡</div>
+        <span class="stat-number">5+</span>
+        <span class="stat-label">Technologies maîtrisées</span>
       </div>
     </div>
   </div>
-</div>
 
-<div id="competences" class="section fade-in">
-  <h2>🚀 Compétences Techniques</h2>
-  
-  <div class="skills-compact">
-    <div class="skill-group">
-      <h3>Langages</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">JavaScript</span>
-      </div>
-    </div>
+  <div id="formation" class="section fade-in">
+    <h2>🎓 Formations et Diplômes</h2>
 
-    <div class="skill-group">
-      <h3>Technologies</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">POO</span>
-        <span class="skill-tag">Bases de données</span>
-        <span class="skill-tag">Développement Web</span>
-        <span class="skill-tag">Méthodologie Agile</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Outils</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Git / GitHub</span>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">IntelliJ IDEA</span>
-        <span class="skill-tag">Linux</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="projets" class="section fade-in">
-  <h2>🎨 Projets</h2>
-  <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">
-    Découvrez mes projets en détail. Cliquez sur un projet pour voir sa présentation complète.
-  </p>
-  
-  <!-- Filtres de projets -->
-  <div class="project-filters">
-    <button class="filter-btn active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="java">Java</button>
-    <button class="filter-btn" data-filter="python">Python</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-  </div>
-  
-  <div class="projects-grid">
-    
-    <div class="project-card" data-category="java">
-      <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-      <div class="project-content">
-        <h3>✅ Gestion de Tâches</h3>
-        <p>Application Java complète pour organiser et suivre ses projets et tâches quotidiennes avec interface JavaFX moderne.</p>
-        <div class="project-tags">
-          <span class="tag">Java</span>
-          <span class="tag">JavaFX</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">Maven</span>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - 2027</div>
+        <div class="timeline-content">
+          <h3>BUT Informatique</h3>
+          <div class="timeline-location">IUT de Lille</div>
+          <p>Formation professionnalisante en développement d'applications, programmation orientée objet, bases de
+            données, réseaux et gestion de projets informatiques.</p>
+          <div class="timeline-badge">En cours • 2ème année</div>
         </div>
-        <a href="projets/gestion-taches.html" class="project-link">Voir le projet →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="web">
-      <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-      <div class="project-content">
-        <h3>🍽️ Site Web Restaurant</h3>
-        <p>Site vitrine responsive avec menu interactif, galerie photos et formulaire de réservation en ligne.</p>
-        <div class="project-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+      <div class="timeline-item">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Baccalauréat Général</h3>
+          <div class="timeline-location">Lycée Vauban, Aire-sur-la-Lys</div>
+          <p>Spécialités : Mathématiques et Numérique et Sciences Informatiques (NSI)</p>
+          <div class="timeline-badge success">Mention Assez Bien</div>
         </div>
-        <a href="projets/site-web-restaurant.html" class="project-link">Voir le projet →</a>
       </div>
     </div>
-
-    <div class="project-card" data-category="python">
-      <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-      <div class="project-content">
-        <h3>🤖 Bot Discord</h3>
-        <p>Bot multifonction avec modération automatique, lecteur de musique, système de niveaux et mini-jeux interactifs.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Discord.py</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
-        <a href="projets/bot-discord.html" class="project-link">Voir le projet →</a>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="python">
-      <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-      <div class="project-content">
-        <h3>🔢 Calculatrice Scientifique</h3>
-        <p>Application Python avec interface Tkinter offrant des fonctions mathématiques avancées et historique des calculs.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Tkinter</span>
-          <span class="tag">NumPy</span>
-        </div>
-        <a href="projets/calculatrice-python.html" class="project-link">Voir le projet →</a>
-      </div>
-    </div>
-
   </div>
-</div>
 
-<div id="contact" class="section fade-in">
-  <h2>📬 Restons en Contact</h2>
-  <p style="font-size: 18px; margin-bottom: 40px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-    Je suis actuellement à la recherche d'un stage de fin d'année. N'hésitez pas à me contacter pour toute opportunité ou collaboration !
-  </p>
-  
-  <!-- Cartes de contact -->
-  <div class="contact-grid">
-    <a href="mailto:lelongmatheo12@gmail.com" class="contact-card email-card">
-      <div class="contact-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-      </div>
-      <div class="contact-info">
-        <h3>Email</h3>
-        <p>lelongmatheo12@gmail.com</p>
-        <span class="contact-action">Envoyez-moi un message →</span>
-      </div>
-    </a>
+  <div id="competences" class="section fade-in">
+    <h2>🚀 Compétences Techniques</h2>
 
-    <a href="tel:0781076890" class="contact-card phone-card">
-      <div class="contact-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
+    <div class="skills-compact">
+      <div class="skill-group">
+        <h3>Langages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
       </div>
-      <div class="contact-info">
-        <h3>Téléphone</h3>
-        <p>07 81 07 68 90</p>
-        <span class="contact-action">Appelez-moi →</span>
-      </div>
-    </a>
 
-    <div class="contact-card location-card">
-      <div class="contact-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
+      <div class="skill-group">
+        <h3>Technologies</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">POO</span>
+          <span class="skill-tag">Bases de données</span>
+          <span class="skill-tag">Développement Web</span>
+          <span class="skill-tag">Méthodologie Agile</span>
+        </div>
       </div>
-      <div class="contact-info">
-        <h3>Localisation</h3>
-        <p>Villeneuve d'Ascq, France</p>
-        <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Aire-sur-la-Lys (62120)</p>
+
+      <div class="skill-group">
+        <h3>Outils</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">IntelliJ IDEA</span>
+          <span class="skill-tag">Linux</span>
+        </div>
       </div>
     </div>
-
-    <a href="https://github.com" target="_blank" rel="noopener" class="contact-card github-card">
-      <div class="contact-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-        </svg>
-      </div>
-      <div class="contact-info">
-        <h3>GitHub</h3>
-        <p>Voir mes projets</p>
-        <span class="contact-action">Visitez mon profil →</span>
-      </div>
-    </a>
   </div>
-</div>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>Mathéo LELONG</h3>
-      <p class="footer-subtitle">Développeur Full Stack</p>
-      <p class="footer-description">Étudiant passionné en BUT Informatique à l'IUT de Lille, spécialisé dans le développement web et logiciel.</p>
+  <div id="projets" class="section fade-in">
+    <h2>🎨 Projets</h2>
+    <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">
+      Découvrez mes projets en détail. Cliquez sur un projet pour voir sa présentation complète.
+    </p>
+
+    <!-- Filtres de projets -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="web">Web</button>
     </div>
 
-    <div class="footer-section">
-      <h4>Navigation</h4>
-      <ul class="footer-links">
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#formation">Formation</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="projects-grid">
 
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <ul class="footer-contact">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <div class="project-card" data-category="java">
+        <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+        <div class="project-content">
+          <h3>✅ Gestion de Tâches</h3>
+          <p>Application Java complète pour organiser et suivre ses projets et tâches quotidiennes avec interface JavaFX
+            moderne.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaFX</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Maven</span>
+          </div>
+          <a href="projets/gestion-taches.html" class="project-link">Voir le projet →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="web">
+        <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+        <div class="project-content">
+          <h3>🍽️ Site Web Restaurant</h3>
+          <p>Site vitrine responsive avec menu interactif, galerie photos et formulaire de réservation en ligne.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="projets/site-web-restaurant.html" class="project-link">Voir le projet →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="python">
+        <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+        <div class="project-content">
+          <h3>🤖 Bot Discord</h3>
+          <p>Bot multifonction avec modération automatique, lecteur de musique, système de niveaux et mini-jeux
+            interactifs.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Discord.py</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <a href="projets/bot-discord.html" class="project-link">Voir le projet →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="python">
+        <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+        <div class="project-content">
+          <h3>🔢 Calculatrice Scientifique</h3>
+          <p>Application Python avec interface Tkinter offrant des fonctions mathématiques avancées et historique des
+            calculs.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Tkinter</span>
+            <span class="tag">NumPy</span>
+          </div>
+          <a href="projets/calculatrice-python.html" class="project-link">Voir le projet →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="contact" class="section fade-in">
+    <h2>📬 Restons en Contact</h2>
+    <p
+      style="font-size: 18px; margin-bottom: 40px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Je suis actuellement à la recherche d'un stage de fin d'année. N'hésitez pas à me contacter pour toute opportunité
+      ou collaboration !
+    </p>
+
+    <!-- Cartes de contact -->
+    <div class="contact-grid">
+      <a href="mailto:lelongmatheo12@gmail.com" class="contact-card email-card">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
-          <a href="mailto:lelongmatheo12@gmail.com">lelongmatheo12@gmail.com</a>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </div>
+        <div class="contact-info">
+          <h3>Email</h3>
+          <p>lelongmatheo12@gmail.com</p>
+          <span class="contact-action">Envoyez-moi un message →</span>
+        </div>
+      </a>
+
+      <a href="tel:+33781076890" class="contact-card phone-card">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
           </svg>
-          <span>07 81 07 68 90</span>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        </div>
+        <div class="contact-info">
+          <h3>Téléphone</h3>
+          <p>07 81 07 68 90</p>
+          <span class="contact-action">Appelez-moi →</span>
+        </div>
+      </a>
+
+      <div class="contact-card location-card">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span>Villeneuve d'Ascq, France</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Réseaux</h4>
-      <div class="footer-social">
-        <a href="https://github.com" target="_blank" rel="noopener" class="social-icon" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
-        <a href="mailto:lelongmatheo12@gmail.com" class="social-icon" title="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </a>
-      </div>
-      <p class="footer-availability">
-        <span class="status-dot"></span>
-        Disponible pour un stage
-      </p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Mathéo LELONG. Tous droits réservés.</p>
-  </div>
-</footer>
-
-<button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème" onclick="toggleTheme()">
-  <span id="themeIcon">🌙</span>
-</button>
-
-<!-- Bouton mode Focus -->
-<button id="focusMode" class="focus-mode-btn" aria-label="Mode Focus" title="Mode Focus (F)">
-  <span>🎯</span>
-</button>
-
-<!-- Modal de bienvenue -->
-<div class="welcome-modal" id="welcomeModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeWelcomeModal()">×</button>
-    <div class="modal-header">
-      <h2>👋 Bienvenue sur mon Portfolio !</h2>
-    </div>
-    <div class="modal-body">
-      <p>Découvrez mes projets et compétences en développement Full-Stack.</p>
-      <div class="modal-features">
-        <div class="feature-item">
-          <span class="feature-icon">⌨️</span>
-          <span>Raccourcis clavier disponibles (appuyez sur <kbd>?</kbd>)</span>
         </div>
-        <div class="feature-item">
-          <span class="feature-icon">🎯</span>
-          <span>Mode Focus pour une lecture concentrée</span>
-        </div>
-        <div class="feature-item">
-          <span class="feature-icon">🎨</span>
-          <span>Thème clair/sombre personnalisable</span>
+        <div class="contact-info">
+          <h3>Localisation</h3>
+          <p>Villeneuve d'Ascq, France</p>
+          <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Aire-sur-la-Lys (62120)</p>
         </div>
       </div>
-      <button class="modal-btn" onclick="closeWelcomeModal()">C'est parti ! 🚀</button>
+
+      <a href="https://github.com/matheolelong" target="_blank" rel="noopener" class="contact-card github-card">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <h3>GitHub</h3>
+          <p>Voir mes projets</p>
+          <span class="contact-action">Visitez mon profil →</span>
+        </div>
+      </a>
     </div>
   </div>
-</div>
 
-<!-- Panel des raccourcis clavier -->
-<div class="shortcuts-panel" id="shortcutsPanel">
-  <div class="shortcuts-content">
-    <button class="shortcuts-close" onclick="toggleShortcuts()">×</button>
-    <h3>⌨️ Raccourcis Clavier</h3>
-    <div class="shortcuts-list">
-      <div class="shortcut-item">
-        <kbd>?</kbd>
-        <span>Afficher/Masquer les raccourcis</span>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mathéo LELONG</h3>
+        <p class="footer-subtitle">Développeur Full Stack</p>
+        <p class="footer-description">Étudiant passionné en BUT Informatique à l'IUT de Lille, spécialisé dans le
+          développement web et logiciel.</p>
       </div>
-      <div class="shortcut-item">
-        <kbd>F</kbd>
-        <span>Mode Focus</span>
+
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="shortcut-item">
-        <kbd>T</kbd>
-        <span>Changer de thème</span>
+
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <a href="mailto:lelongmatheo12@gmail.com">lelongmatheo12@gmail.com</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>07 81 07 68 90</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Villeneuve d'Ascq, France</span>
+          </li>
+        </ul>
       </div>
-      <div class="shortcut-item">
-        <kbd>H</kbd>
-        <span>Retour en haut</span>
+
+      <div class="footer-section">
+        <h4>Réseaux</h4>
+        <div class="footer-social">
+          <a href="https://github.com/matheolelong" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/matheo-lelong" target="_blank" rel="noopener" class="social-icon"
+            title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:lelongmatheo12@gmail.com" class="social-icon" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+        <p class="footer-availability">
+          <span class="status-dot"></span>
+          Disponible pour un stage
+        </p>
       </div>
-      <div class="shortcut-item">
-        <kbd>Esc</kbd>
-        <span>Désactiver le mode Focus</span>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mathéo LELONG. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="themeToggle" class="theme-toggle" aria-label="Changer le thème" title="Changer le thème"
+    onclick="toggleTheme()">
+    <span id="themeIcon">🌙</span>
+  </button>
+
+  <!-- Bouton mode Focus -->
+  <button id="focusMode" class="focus-mode-btn" aria-label="Mode Focus" title="Mode Focus (F)">
+    <span>🎯</span>
+  </button>
+
+  <!-- Modal de bienvenue -->
+  <div class="welcome-modal" id="welcomeModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeWelcomeModal()">×</button>
+      <div class="modal-header">
+        <h2>👋 Bienvenue sur mon Portfolio !</h2>
+      </div>
+      <div class="modal-body">
+        <p>Découvrez mes projets et compétences en développement Full-Stack.</p>
+        <div class="modal-features">
+          <div class="feature-item">
+            <span class="feature-icon">⌨️</span>
+            <span>Raccourcis clavier disponibles (appuyez sur <kbd>?</kbd>)</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span>Mode Focus pour une lecture concentrée</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎨</span>
+            <span>Thème clair/sombre personnalisable</span>
+          </div>
+        </div>
+        <button class="modal-btn" onclick="closeWelcomeModal()">C'est parti ! 🚀</button>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-// ============================================
-// PARTICULES CANVAS
-// ============================================
-function initParticles() {
-  const canvas = document.getElementById('particles');
-  if (!canvas) return;
-  
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  
-  const particles = [];
-  const particleCount = Math.min(50, Math.floor(window.innerWidth / 20));
-  
-  class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 1;
-      this.speedX = Math.random() * 0.5 - 0.25;
-      this.speedY = Math.random() * 0.5 - 0.25;
-      this.opacity = Math.random() * 0.5 + 0.2;
+  <!-- Panel des raccourcis clavier -->
+  <div class="shortcuts-panel" id="shortcutsPanel">
+    <div class="shortcuts-content">
+      <button class="shortcuts-close" onclick="toggleShortcuts()">×</button>
+      <h3>⌨️ Raccourcis Clavier</h3>
+      <div class="shortcuts-list">
+        <div class="shortcut-item">
+          <kbd>?</kbd>
+          <span>Afficher/Masquer les raccourcis</span>
+        </div>
+        <div class="shortcut-item">
+          <kbd>F</kbd>
+          <span>Mode Focus</span>
+        </div>
+        <div class="shortcut-item">
+          <kbd>T</kbd>
+          <span>Changer de thème</span>
+        </div>
+        <div class="shortcut-item">
+          <kbd>H</kbd>
+          <span>Retour en haut</span>
+        </div>
+        <div class="shortcut-item">
+          <kbd>Esc</kbd>
+          <span>Désactiver le mode Focus</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ============================================
+    // PARTICULES CANVAS
+    // ============================================
+    function initParticles() {
+      const canvas = document.getElementById('particles');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const particleCount = Math.min(50, Math.floor(window.innerWidth / 20));
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 1;
+          this.speedX = Math.random() * 0.5 - 0.25;
+          this.speedY = Math.random() * 0.5 - 0.25;
+          this.opacity = Math.random() * 0.5 + 0.2;
+        }
+
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
+
+        draw() {
+          ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
     }
-    
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      
-      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-    
-    draw() {
-      ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-  
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-  
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(particle => {
-      particle.update();
-      particle.draw();
-    });
-    requestAnimationFrame(animate);
-  }
-  
-  animate();
-  
-  window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-}
 
-// ============================================
-// MENU MOBILE
-// ============================================
-let _prevFocused = null;
-let _focusableMenuEls = null;
+    // ============================================
+    // MENU MOBILE
+    // ============================================
+    let _prevFocused = null;
+    let _focusableMenuEls = null;
 
-function toggleMenu() {
-  const links = document.getElementById('menuLinks');
-  const btn = document.getElementById('menuBtn');
-  const isOpen = links.classList.toggle('active');
-  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  if (isOpen) trapFocusInMenu(); else releaseFocusTrap();
-}
-
-function handleMenuKeydown(e) {
-  if (!_focusableMenuEls) return;
-  if (e.key === 'Tab') {
-    const first = _focusableMenuEls[0];
-    const last = _focusableMenuEls[_focusableMenuEls.length - 1];
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  } else if (e.key === 'Escape') {
-    const links = document.getElementById('menuLinks');
-    links.classList.remove('active');
-    const btn = document.getElementById('menuBtn');
-    if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
-    releaseFocusTrap();
-  }
-}
-
-function trapFocusInMenu() {
-  const menu = document.getElementById('menuLinks');
-  if (!menu) return;
-  _prevFocused = document.activeElement;
-  _focusableMenuEls = Array.from(menu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'));
-  if (_focusableMenuEls.length) _focusableMenuEls[0].focus();
-  document.addEventListener('keydown', handleMenuKeydown);
-}
-
-function releaseFocusTrap() {
-  document.removeEventListener('keydown', handleMenuKeydown);
-  if (_prevFocused && _prevFocused.focus) _prevFocused.focus();
-  _prevFocused = null;
-  _focusableMenuEls = null;
-}
-
-// ============================================
-// NAVBAR SCROLL EFFECT
-// ============================================
-window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-// ============================================
-// SMOOTH SCROLL
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Fermer le menu mobile après clic
+    function toggleMenu() {
       const links = document.getElementById('menuLinks');
-      links.classList.remove('active');
       const btn = document.getElementById('menuBtn');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-      // release focus trap if any
-      releaseFocusTrap();
+      const isOpen = links.classList.toggle('active');
+      if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) trapFocusInMenu(); else releaseFocusTrap();
     }
-  });
-});
 
-// ============================================
-// ANIMATIONS FADE-IN
-// ============================================
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+    function handleMenuKeydown(e) {
+      if (!_focusableMenuEls) return;
+      if (e.key === 'Tab') {
+        const first = _focusableMenuEls[0];
+        const last = _focusableMenuEls[_focusableMenuEls.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      } else if (e.key === 'Escape') {
+        const links = document.getElementById('menuLinks');
+        links.classList.remove('active');
+        const btn = document.getElementById('menuBtn');
+        if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+        releaseFocusTrap();
+      }
     }
-  });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-// ============================================
-// THEME TOGGLE (DARK/LIGHT)
-// ============================================
-function applyTheme(theme) {
-  if (theme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-  }
-  localStorage.setItem('site-theme', theme);
-  updateThemeIcon();
-}
-
-function updateThemeIcon() {
-  const icon = document.getElementById('themeIcon');
-  if (!icon) return;
-  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  icon.textContent = isLight ? '☀️' : '🌙';
-}
-
-function toggleTheme() {
-  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  applyTheme(isLight ? 'dark' : 'light');
-}
-
-// ============================================
-// BARRE DE PROGRESSION DE LECTURE
-// ============================================
-window.addEventListener('scroll', () => {
-  const progressBar = document.getElementById('readingProgress');
-  if (progressBar) {
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight - windowHeight;
-    const scrolled = window.scrollY;
-    const progress = (scrolled / documentHeight) * 100;
-    progressBar.style.width = progress + '%';
-  }
-});
-
-// ============================================
-// COMPTEUR ANIMÉ POUR LES STATISTIQUES
-// ============================================
-function animateCounter(element, target, duration = 2000) {
-  const start = 0;
-  const increment = target / (duration / 16);
-  let current = start;
-  
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      element.textContent = target + '+';
-      clearInterval(timer);
-    } else {
-      element.textContent = Math.floor(current) + '+';
+    function trapFocusInMenu() {
+      const menu = document.getElementById('menuLinks');
+      if (!menu) return;
+      _prevFocused = document.activeElement;
+      _focusableMenuEls = Array.from(menu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'));
+      if (_focusableMenuEls.length) _focusableMenuEls[0].focus();
+      document.addEventListener('keydown', handleMenuKeydown);
     }
-  }, 16);
-}
 
-// Observer pour déclencher les compteurs
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.dataset.animated) {
-      entry.target.dataset.animated = 'true';
-      const number = entry.target.querySelector('.stat-number');
-      const target = parseInt(entry.target.dataset.count);
-      animateCounter(number, target);
+    function releaseFocusTrap() {
+      document.removeEventListener('keydown', handleMenuKeydown);
+      if (_prevFocused && _prevFocused.focus) _prevFocused.focus();
+      _prevFocused = null;
+      _focusableMenuEls = null;
     }
-  });
-}, { threshold: 0.5 });
 
-document.querySelectorAll('.stat-item').forEach(item => {
-  statsObserver.observe(item);
-});
-
-// ============================================
-// FILTRAGE DES PROJETS
-// ============================================
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Mettre à jour les boutons actifs
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    
-    const filter = btn.dataset.filter;
-    
-    projectCards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.style.display = 'block';
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
-        }, 10);
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
       } else {
-        card.style.opacity = '0';
-        card.style.transform = 'scale(0.8)';
-        setTimeout(() => {
-          card.style.display = 'none';
-        }, 300);
+        navbar.classList.remove('scrolled');
       }
     });
-  });
-});
 
-// ============================================
-// EASTER EGG - CLIC SUR LE LOGO
-// ============================================
-let logoClickCount = 0;
-const logo = document.querySelector('.logo');
-if (logo) {
-  logo.addEventListener('click', () => {
-    logoClickCount++;
-    if (logoClickCount === 5) {
-      // Animation spéciale
-      document.body.style.animation = 'rainbow 2s ease-in-out';
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Fermer le menu mobile après clic
+          const links = document.getElementById('menuLinks');
+          links.classList.remove('active');
+          const btn = document.getElementById('menuBtn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+          // release focus trap if any
+          releaseFocusTrap();
+        }
+      });
+    });
+
+    // ============================================
+    // ANIMATIONS FADE-IN
+    // ============================================
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ============================================
+    // THEME TOGGLE (DARK/LIGHT)
+    // ============================================
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('site-theme', theme);
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      const icon = document.getElementById('themeIcon');
+      if (!icon) return;
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      icon.textContent = isLight ? '☀️' : '🌙';
+    }
+
+    function toggleTheme() {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      applyTheme(isLight ? 'dark' : 'light');
+    }
+
+    // ============================================
+    // BARRE DE PROGRESSION DE LECTURE
+    // ============================================
+    window.addEventListener('scroll', () => {
+      const progressBar = document.getElementById('readingProgress');
+      if (progressBar) {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / documentHeight) * 100;
+        progressBar.style.width = progress + '%';
+      }
+    });
+
+    // ============================================
+    // COMPTEUR ANIMÉ POUR LES STATISTIQUES
+    // ============================================
+    function animateCounter(element, target, duration = 2000) {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current) + '+';
+        }
+      }, 16);
+    }
+
+    // Observer pour déclencher les compteurs
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          const number = entry.target.querySelector('.stat-number');
+          const target = parseInt(entry.target.dataset.count);
+          animateCounter(number, target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-item').forEach(item => {
+      statsObserver.observe(item);
+    });
+
+    // ============================================
+    // FILTRAGE DES PROJETS
+    // ============================================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Mettre à jour les boutons actifs
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // ============================================
+    // EASTER EGG - CLIC SUR LE LOGO
+    // ============================================
+    let logoClickCount = 0;
+    const logo = document.querySelector('.logo');
+    if (logo) {
+      logo.addEventListener('click', () => {
+        logoClickCount++;
+        if (logoClickCount === 5) {
+          // Animation spéciale
+          document.body.style.animation = 'rainbow 2s ease-in-out';
+          setTimeout(() => {
+            document.body.style.animation = '';
+          }, 2000);
+
+          // Message secret
+          const message = document.createElement('div');
+          message.className = 'easter-egg-message';
+          message.textContent = '🎉 Vous avez trouvé l\'Easter Egg ! 🎉';
+          document.body.appendChild(message);
+
+          setTimeout(() => {
+            message.remove();
+            logoClickCount = 0;
+          }, 3000);
+        }
+      });
+    }
+
+    // ============================================
+    // COPIE EMAIL AU CLIC
+    // ============================================
+    const emailCard = document.querySelector('.email-card');
+    if (emailCard) {
+      emailCard.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = 'lelongmatheo12@gmail.com';
+
+        // Essayer de copier dans le presse-papiers
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(email).then(() => {
+            showNotification('📧 Email copié dans le presse-papiers !');
+          });
+        } else {
+          // Fallback : ouvrir le client email
+          window.location.href = 'mailto:' + email;
+        }
+      });
+    }
+
+    // Fonction pour afficher une notification
+    function showNotification(message) {
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      notification.textContent = message;
+      document.body.appendChild(notification);
+
       setTimeout(() => {
-        document.body.style.animation = '';
-      }, 2000);
-      
-      // Message secret
-      const message = document.createElement('div');
-      message.className = 'easter-egg-message';
-      message.textContent = '🎉 Vous avez trouvé l\'Easter Egg ! 🎉';
-      document.body.appendChild(message);
-      
+        notification.classList.add('show');
+      }, 10);
+
       setTimeout(() => {
-        message.remove();
-        logoClickCount = 0;
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
       }, 3000);
     }
-  });
-}
 
-// ============================================
-// COPIE EMAIL AU CLIC
-// ============================================
-const emailCard = document.querySelector('.email-card');
-if (emailCard) {
-  emailCard.addEventListener('click', (e) => {
-    e.preventDefault();
-    const email = 'lelongmatheo12@gmail.com';
-    
-    // Essayer de copier dans le presse-papiers
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(email).then(() => {
-        showNotification('📧 Email copié dans le presse-papiers !');
-      });
-    } else {
-      // Fallback : ouvrir le client email
-      window.location.href = 'mailto:' + email;
+    // ============================================
+    // MODE FOCUS / ZEN
+    // ============================================
+    let focusModeActive = false;
+    const focusBtn = document.getElementById('focusMode');
+
+    if (focusBtn) {
+      focusBtn.addEventListener('click', toggleFocusMode);
     }
-  });
-}
 
-// Fonction pour afficher une notification
-function showNotification(message) {
-  const notification = document.createElement('div');
-  notification.className = 'notification';
-  notification.textContent = message;
-  document.body.appendChild(notification);
-  
-  setTimeout(() => {
-    notification.classList.add('show');
-  }, 10);
-  
-  setTimeout(() => {
-    notification.classList.remove('show');
-    setTimeout(() => notification.remove(), 300);
-  }, 3000);
-}
+    function toggleFocusMode() {
+      focusModeActive = !focusModeActive;
+      document.body.classList.toggle('focus-mode', focusModeActive);
 
-// ============================================
-// MODE FOCUS / ZEN
-// ============================================
-let focusModeActive = false;
-const focusBtn = document.getElementById('focusMode');
-
-if (focusBtn) {
-  focusBtn.addEventListener('click', toggleFocusMode);
-}
-
-function toggleFocusMode() {
-  focusModeActive = !focusModeActive;
-  document.body.classList.toggle('focus-mode', focusModeActive);
-  
-  if (focusModeActive) {
-    showNotification('🎯 Mode Focus activé - Concentrez-vous sur le contenu');
-  } else {
-    showNotification('✅ Mode Focus désactivé');
-  }
-}
-
-// ============================================
-// RACCOURCIS CLAVIER
-// ============================================
-let shortcutsVisible = false;
-
-function toggleShortcuts() {
-  shortcutsVisible = !shortcutsVisible;
-  const panel = document.getElementById('shortcutsPanel');
-  if (panel) {
-    panel.classList.toggle('visible', shortcutsVisible);
-  }
-}
-
-document.addEventListener('keydown', (e) => {
-  // Ignorer si on écrit dans un input
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-  
-  switch(e.key.toLowerCase()) {
-    case '?':
-      e.preventDefault();
-      toggleShortcuts();
-      break;
-    case 'f':
-      e.preventDefault();
-      toggleFocusMode();
-      break;
-    case 't':
-      e.preventDefault();
-      toggleTheme();
-      break;
-    case 'h':
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      break;
-    case 'escape':
       if (focusModeActive) {
-        toggleFocusMode();
+        showNotification('🎯 Mode Focus activé - Concentrez-vous sur le contenu');
+      } else {
+        showNotification('✅ Mode Focus désactivé');
       }
-      if (shortcutsVisible) {
-        toggleShortcuts();
+    }
+
+    // ============================================
+    // RACCOURCIS CLAVIER
+    // ============================================
+    let shortcutsVisible = false;
+
+    function toggleShortcuts() {
+      shortcutsVisible = !shortcutsVisible;
+      const panel = document.getElementById('shortcutsPanel');
+      if (panel) {
+        panel.classList.toggle('visible', shortcutsVisible);
       }
-      break;
-  }
-});
+    }
 
-// ============================================
-// EFFET PARALLAX SUR LE HEADER
-// ============================================
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const header = document.querySelector('header');
-  const headerContent = document.querySelector('.header-content');
-  
-  if (header && scrolled < window.innerHeight) {
-    headerContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-    headerContent.style.opacity = 1 - (scrolled / 600);
-  }
-});
+    document.addEventListener('keydown', (e) => {
+      // Ignorer si on écrit dans un input
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
-// ============================================
-// COMPTEUR DE VISITES (LocalStorage)
-// ============================================
-function initVisitCounter() {
-  let visits = parseInt(localStorage.getItem('portfolio-visits') || '0');
-  visits++;
-  localStorage.setItem('portfolio-visits', visits);
-  
-  // Afficher discrètement dans la console
-  console.log(`🎉 Merci pour votre ${visits}ème visite !`);
-  console.log('%cMathéo LELONG', 'font-size: 24px; font-weight: bold; background: linear-gradient(135deg, #6366f1, #8b5cf6); -webkit-background-clip: text; color: transparent;');
-  console.log('%cDéveloppeur Full-Stack', 'font-size: 16px; color: #8b5cf6;');
-  
-  // Easter egg dans la console
-  if (visits === 10) {
-    console.log('%c🎆 10 visites ! Vous êtes un visiteur fidèle ! 🎆', 'font-size: 20px; font-weight: bold; color: #feca57; background: #0a0a0a; padding: 10px;');
-  }
-}
+      switch (e.key.toLowerCase()) {
+        case '?':
+          e.preventDefault();
+          toggleShortcuts();
+          break;
+        case 'f':
+          e.preventDefault();
+          toggleFocusMode();
+          break;
+        case 't':
+          e.preventDefault();
+          toggleTheme();
+          break;
+        case 'h':
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          break;
+        case 'escape':
+          if (focusModeActive) {
+            toggleFocusMode();
+          }
+          if (shortcutsVisible) {
+            toggleShortcuts();
+          }
+          break;
+      }
+    });
 
-// ============================================
-// MODAL DE BIENVENUE (première visite)
-// ============================================
-function showWelcomeModal() {
-  const hasVisited = localStorage.getItem('portfolio-has-visited');
-  if (!hasVisited) {
-    setTimeout(() => {
+    // ============================================
+    // EFFET PARALLAX SUR LE HEADER
+    // ============================================
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const header = document.querySelector('header');
+      const headerContent = document.querySelector('.header-content');
+
+      if (header && scrolled < window.innerHeight) {
+        headerContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+        headerContent.style.opacity = 1 - (scrolled / 600);
+      }
+    });
+
+    // ============================================
+    // COMPTEUR DE VISITES (LocalStorage)
+    // ============================================
+    function initVisitCounter() {
+      let visits = parseInt(localStorage.getItem('portfolio-visits') || '0');
+      visits++;
+      localStorage.setItem('portfolio-visits', visits);
+
+      // Afficher discrètement dans la console
+      console.log(`🎉 Merci pour votre ${visits}ème visite !`);
+      console.log('%cMathéo LELONG', 'font-size: 24px; font-weight: bold; background: linear-gradient(135deg, #6366f1, #8b5cf6); -webkit-background-clip: text; color: transparent;');
+      console.log('%cDéveloppeur Full-Stack', 'font-size: 16px; color: #8b5cf6;');
+
+      // Easter egg dans la console
+      if (visits === 10) {
+        console.log('%c🎆 10 visites ! Vous êtes un visiteur fidèle ! 🎆', 'font-size: 20px; font-weight: bold; color: #feca57; background: #0a0a0a; padding: 10px;');
+      }
+    }
+
+    // ============================================
+    // MODAL DE BIENVENUE (première visite)
+    // ============================================
+    function showWelcomeModal() {
+      const hasVisited = localStorage.getItem('portfolio-has-visited');
+      if (!hasVisited) {
+        setTimeout(() => {
+          const modal = document.getElementById('welcomeModal');
+          if (modal) {
+            modal.classList.add('show');
+          }
+        }, 500);
+      }
+    }
+
+    function closeWelcomeModal() {
       const modal = document.getElementById('welcomeModal');
       if (modal) {
-        modal.classList.add('show');
+        modal.classList.remove('show');
+        localStorage.setItem('portfolio-has-visited', 'true');
       }
-    }, 500);
-  }
-}
-
-function closeWelcomeModal() {
-  const modal = document.getElementById('welcomeModal');
-  if (modal) {
-    modal.classList.remove('show');
-    localStorage.setItem('portfolio-has-visited', 'true');
-  }
-}
-
-// ============================================
-// ANIMATIONS AU HOVER DES COMPÉTENCES
-// ============================================
-document.querySelectorAll('.skill-tag').forEach(tag => {
-  tag.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-5px) rotate(' + (Math.random() * 10 - 5) + 'deg)';
-  });
-  
-  tag.addEventListener('mouseleave', function() {
-    this.style.transform = '';
-  });
-});
-
-// ============================================
-// COPIE DE CODE AUTOMATIQUE (sur les tags de techno)
-// ============================================
-document.querySelectorAll('.tag, .skill-tag').forEach(tag => {
-  tag.addEventListener('dblclick', function() {
-    const text = this.textContent;
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(() => {
-        showNotification(`📋 "${text}" copié !`);
-        this.style.animation = 'pulse 0.5s ease';
-        setTimeout(() => {
-          this.style.animation = '';
-        }, 500);
-      });
     }
-  });
-  
-  // Ajouter un titre pour indiquer la fonctionnalité
-  tag.title = 'Double-cliquez pour copier';
-});
 
-// ============================================
-// INITIALISATION
-// ============================================
-initParticles();
-initVisitCounter();
-showWelcomeModal();
+    // ============================================
+    // ANIMATIONS AU HOVER DES COMPÉTENCES
+    // ============================================
+    document.querySelectorAll('.skill-tag').forEach(tag => {
+      tag.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-5px) rotate(' + (Math.random() * 10 - 5) + 'deg)';
+      });
 
-const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-applyTheme(saved);
-updateThemeIcon();
-</script>
+      tag.addEventListener('mouseleave', function () {
+        this.style.transform = '';
+      });
+    });
+
+    // ============================================
+    // COPIE DE CODE AUTOMATIQUE (sur les tags de techno)
+    // ============================================
+    document.querySelectorAll('.tag, .skill-tag').forEach(tag => {
+      tag.addEventListener('dblclick', function () {
+        const text = this.textContent;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(() => {
+            showNotification(`📋 "${text}" copié !`);
+            this.style.animation = 'pulse 0.5s ease';
+            setTimeout(() => {
+              this.style.animation = '';
+            }, 500);
+          });
+        }
+      });
+
+      // Ajouter un titre pour indiquer la fonctionnalité
+      tag.title = 'Double-cliquez pour copier';
+    });
+
+    // ============================================
+    // INITIALISATION
+    // ============================================
+    initParticles();
+    initVisitCounter();
+    showWelcomeModal();
+
+    const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    applyTheme(saved);
+    updateThemeIcon();
+  </script>
 
 </body>
+
 </html>
