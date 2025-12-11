@@ -1,5 +1,5 @@
 /* ============================================
-   FONCTIONNALITÉS PREMIUM - CSS
+   STYLES SOBRES DU PORTFOLIO
    ============================================ */
 
 /* Curseur de typing */
@@ -10,153 +10,12 @@
 }
 
 @keyframes blink {
-
     0%,
     50% {
         opacity: 1;
     }
-
     51%,
     100% {
         opacity: 0;
-    }
-}
-
-/* Curseur personnalisé */
-.custom-cursor {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transition: transform 0.1s, opacity 0.3s;
-    transform: translate(-50%, -50%);
-    opacity: 0.7;
-}
-
-.cursor-dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transform: translate(-50%, -50%);
-}
-
-.cursor-hover {
-    transform: translate(-50%, -50%) scale(1.5);
-    border-color: var(--secondary);
-    background: rgba(99, 102, 241, 0.1);
-}
-
-.dot-hover {
-    transform: translate(-50%, -50%) scale(0);
-}
-
-/* Cache le curseur par défaut sur desktop */
-@media (min-width: 769px) {
-    body {
-        cursor: none;
-    }
-
-    a,
-    button,
-    .project-card,
-    .contact-card,
-    .filter-btn {
-        cursor: none;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .custom-cursor,
-    .cursor-dot {
-        display: none;
-    }
-}
-
-/* Confetti */
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    top: -10px;
-    border-radius: 50%;
-    animation: fall linear forwards;
-    z-index: 99998;
-    pointer-events: none;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(100vh) rotate(720deg);
-        opacity: 0;
-    }
-}
-
-/* Indicateur de scroll */
-.scroll-percentage {
-    position: fixed;
-    bottom: 180px;
-    right: 30px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 14px;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s;
-    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
-}
-
-/* Particules au clic */
-.click-particle {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99997;
-    animation: explode 0.6s ease-out forwards;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes explode {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0);
-        opacity: 0;
-    }
-}
-
-/* Section glow */
-.section-glow {
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 8px 40px rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Responsive scroll indicator */
-@media (max-width: 768px) {
-    .scroll-percentage {
-        bottom: 150px;
-        right: 20px;
-        padding: 8px 12px;
-        font-size: 12px;
     }
 }

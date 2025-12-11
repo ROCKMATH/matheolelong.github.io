@@ -417,69 +417,6 @@
     <span id="themeIcon">🌙</span>
   </button>
 
-  <!-- Bouton mode Focus -->
-  <button id="focusMode" class="focus-mode-btn" aria-label="Mode Focus" title="Mode Focus (F)">
-    <span>🎯</span>
-  </button>
-
-  <!-- Modal de bienvenue -->
-  <div class="welcome-modal" id="welcomeModal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeWelcomeModal()">×</button>
-      <div class="modal-header">
-        <h2>👋 Bienvenue sur mon Portfolio !</h2>
-      </div>
-      <div class="modal-body">
-        <p>Découvrez mes projets et compétences en développement Full-Stack.</p>
-        <div class="modal-features">
-          <div class="feature-item">
-            <span class="feature-icon">⌨️</span>
-            <span>Raccourcis clavier disponibles (appuyez sur <kbd>?</kbd>)</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎯</span>
-            <span>Mode Focus pour une lecture concentrée</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎨</span>
-            <span>Thème clair/sombre personnalisable</span>
-          </div>
-        </div>
-        <button class="modal-btn" onclick="closeWelcomeModal()">C'est parti ! 🚀</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Panel des raccourcis clavier -->
-  <div class="shortcuts-panel" id="shortcutsPanel">
-    <div class="shortcuts-content">
-      <button class="shortcuts-close" onclick="toggleShortcuts()">×</button>
-      <h3>⌨️ Raccourcis Clavier</h3>
-      <div class="shortcuts-list">
-        <div class="shortcut-item">
-          <kbd>?</kbd>
-          <span>Afficher/Masquer les raccourcis</span>
-        </div>
-        <div class="shortcut-item">
-          <kbd>F</kbd>
-          <span>Mode Focus</span>
-        </div>
-        <div class="shortcut-item">
-          <kbd>T</kbd>
-          <span>Changer de thème</span>
-        </div>
-        <div class="shortcut-item">
-          <kbd>H</kbd>
-          <span>Retour en haut</span>
-        </div>
-        <div class="shortcut-item">
-          <kbd>Esc</kbd>
-          <span>Désactiver le mode Focus</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
     // ============================================
     // PARTICULES CANVAS
@@ -811,71 +748,7 @@
       }, 3000);
     }
 
-    // ============================================
-    // MODE FOCUS / ZEN
-    // ============================================
-    let focusModeActive = false;
-    const focusBtn = document.getElementById('focusMode');
 
-    if (focusBtn) {
-      focusBtn.addEventListener('click', toggleFocusMode);
-    }
-
-    function toggleFocusMode() {
-      focusModeActive = !focusModeActive;
-      document.body.classList.toggle('focus-mode', focusModeActive);
-
-      if (focusModeActive) {
-        showNotification('🎯 Mode Focus activé - Concentrez-vous sur le contenu');
-      } else {
-        showNotification('✅ Mode Focus désactivé');
-      }
-    }
-
-    // ============================================
-    // RACCOURCIS CLAVIER
-    // ============================================
-    let shortcutsVisible = false;
-
-    function toggleShortcuts() {
-      shortcutsVisible = !shortcutsVisible;
-      const panel = document.getElementById('shortcutsPanel');
-      if (panel) {
-        panel.classList.toggle('visible', shortcutsVisible);
-      }
-    }
-
-    document.addEventListener('keydown', (e) => {
-      // Ignorer si on écrit dans un input
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-
-      switch (e.key.toLowerCase()) {
-        case '?':
-          e.preventDefault();
-          toggleShortcuts();
-          break;
-        case 'f':
-          e.preventDefault();
-          toggleFocusMode();
-          break;
-        case 't':
-          e.preventDefault();
-          toggleTheme();
-          break;
-        case 'h':
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          break;
-        case 'escape':
-          if (focusModeActive) {
-            toggleFocusMode();
-          }
-          if (shortcutsVisible) {
-            toggleShortcuts();
-          }
-          break;
-      }
-    });
 
     // ============================================
     // EFFET PARALLAX SUR LE HEADER
@@ -910,69 +783,13 @@
       }
     }
 
-    // ============================================
-    // MODAL DE BIENVENUE (première visite)
-    // ============================================
-    function showWelcomeModal() {
-      const hasVisited = localStorage.getItem('portfolio-has-visited');
-      if (!hasVisited) {
-        setTimeout(() => {
-          const modal = document.getElementById('welcomeModal');
-          if (modal) {
-            modal.classList.add('show');
-          }
-        }, 500);
-      }
-    }
 
-    function closeWelcomeModal() {
-      const modal = document.getElementById('welcomeModal');
-      if (modal) {
-        modal.classList.remove('show');
-        localStorage.setItem('portfolio-has-visited', 'true');
-      }
-    }
-
-    // ============================================
-    // ANIMATIONS AU HOVER DES COMPÉTENCES
-    // ============================================
-    document.querySelectorAll('.skill-tag').forEach(tag => {
-      tag.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-5px) rotate(' + (Math.random() * 10 - 5) + 'deg)';
-      });
-
-      tag.addEventListener('mouseleave', function () {
-        this.style.transform = '';
-      });
-    });
-
-    // ============================================
-    // COPIE DE CODE AUTOMATIQUE (sur les tags de techno)
-    // ============================================
-    document.querySelectorAll('.tag, .skill-tag').forEach(tag => {
-      tag.addEventListener('dblclick', function () {
-        const text = this.textContent;
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(text).then(() => {
-            showNotification(`📋 "${text}" copié !`);
-            this.style.animation = 'pulse 0.5s ease';
-            setTimeout(() => {
-              this.style.animation = '';
-            }, 500);
-          });
-        }
-      });
-
-      // Ajouter un titre pour indiquer la fonctionnalité
-      tag.title = 'Double-cliquez pour copier';
-    });
 
     // ============================================
     // INITIALISATION
     // ============================================
     initParticles();
     initVisitCounter();
-    showWelcomeModal();
 
     const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
     applyTheme(saved);

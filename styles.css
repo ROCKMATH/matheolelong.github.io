@@ -1550,33 +1550,6 @@ footer::before {
     max-width: 90%;
   }
   
-  /* Nouvelles fonctionnalités responsive */
-  .focus-mode-btn {
-    bottom: 100px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-  
-  .shortcuts-panel {
-    width: 90%;
-    right: -100%;
-  }
-  
-  .shortcuts-panel.visible {
-    right: 5%;
-  }
-  
-  .modal-content {
-    padding: 30px 20px;
-    width: 95%;
-  }
-  
-  .modal-header h2 {
-    font-size: 22px;
-  }
-  
   /* Navbar mobile */
   .navbar {
     padding: 15px 20px;
@@ -1590,23 +1563,25 @@ footer::before {
 /* Mode sombre / clair toggle */
 .theme-toggle {
   position: fixed;
-  bottom: 100px;
+  bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: var(--primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 5px 20px rgba(99,102,241,0.4);
+  box-shadow: 0 4px 15px rgba(99,102,241,0.3);
   z-index: 1000;
   transition: all 0.3s;
+  border: none;
+  font-size: 20px;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1) rotate(15deg);
+  transform: scale(1.05);
 }
 
 .theme-toggle span {
@@ -2078,313 +2053,8 @@ footer::before {
 }
 
 /* ============================================
-   NOUVELLES FONCTIONNALITÉS V2
+   THÈME TOGGLE
    ============================================ */
-
-/* Mode Focus/Zen */
-.focus-mode-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 9999;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-.focus-mode-btn:hover {
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
-}
-
-body.focus-mode .navbar,
-body.focus-mode .particles,
-body.focus-mode .reading-progress,
-body.focus-mode footer {
-  opacity: 0.1;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-
-/* Les boutons restent toujours cliquables */
-body.focus-mode .theme-toggle,
-body.focus-mode .focus-mode-btn {
-  opacity: 0.3;
-  transition: opacity 0.5s ease;
-  pointer-events: auto;
-}
-
-body.focus-mode .theme-toggle:hover,
-body.focus-mode .focus-mode-btn:hover {
-  opacity: 1;
-}
-
-body.focus-mode .section {
-  max-width: 800px;
-  margin: 60px auto;
-  animation: focusPulse 2s ease-in-out infinite;
-}
-
-@keyframes focusPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.4); }
-}
-
-/* Modal de bienvenue */
-.welcome-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10001;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.welcome-modal.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-content {
-  background: var(--card);
-  border-radius: 30px;
-  padding: 40px;
-  max-width: 600px;
-  width: 90%;
-  position: relative;
-  border: 2px solid var(--primary);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.5);
-  animation: modalSlideIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-@keyframes modalSlideIn {
-  from {
-    transform: scale(0.8) translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 32px;
-  color: var(--text-dim);
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.modal-close:hover {
-  background: var(--card-hover);
-  color: var(--primary);
-  transform: rotate(90deg);
-}
-
-.modal-header h2 {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.modal-body p {
-  color: var(--text-dim);
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.modal-features {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  background: rgba(99, 102, 241, 0.1);
-  border-radius: 15px;
-  transition: all 0.3s;
-}
-
-.feature-item:hover {
-  background: rgba(99, 102, 241, 0.2);
-  transform: translateX(10px);
-}
-
-.feature-icon {
-  font-size: 24px;
-}
-
-.feature-item kbd {
-  background: var(--card-hover);
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-family: monospace;
-  border: 1px solid var(--border-color);
-}
-
-.modal-btn {
-  width: 100%;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
-}
-
-.modal-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
-}
-
-/* Panel des raccourcis clavier */
-.shortcuts-panel {
-  position: fixed;
-  top: 50%;
-  right: -400px;
-  transform: translateY(-50%);
-  background: var(--card);
-  border: 2px solid var(--primary);
-  border-radius: 20px;
-  padding: 30px;
-  width: 350px;
-  z-index: 10000;
-  transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-}
-
-.shortcuts-panel.visible {
-  right: 30px;
-}
-
-.shortcuts-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  color: var(--text-dim);
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.shortcuts-close:hover {
-  background: var(--card-hover);
-  color: var(--primary);
-  transform: rotate(90deg);
-}
-
-.shortcuts-panel h3 {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-.shortcuts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.shortcut-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px;
-  background: rgba(99, 102, 241, 0.1);
-  border-radius: 12px;
-  transition: all 0.3s;
-}
-
-.shortcut-item:hover {
-  background: rgba(99, 102, 241, 0.2);
-  transform: translateX(-5px);
-}
-
-.shortcut-item kbd {
-  background: var(--card-hover);
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-  font-size: 16px;
-  border: 2px solid var(--border-color);
-  min-width: 40px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.shortcut-item span {
-  flex: 1;
-  color: var(--text-dim);
-  font-size: 14px;
-}
-
-/* Animation pulse pour kbd */
-@keyframes kbdPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-.shortcut-item:hover kbd {
-  animation: kbdPulse 0.5s ease;
-}
-
-
-.cta-button:hover svg {
-  transform: translateX(5px);
-}
 
 /* Mode clair - Adaptations */
 :root[data-theme='light'] header {
